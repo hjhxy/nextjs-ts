@@ -1,0 +1,138 @@
+.root {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .container {
+  height: 60px;
+  width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.root .container .logo {
+  display: inline-block;
+  height: 22px;
+  margin: 0 12px 0 24px;
+}
+.root .container .logo img {
+  height: 100%;
+  width: auto;
+}
+.root .container .right_content {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.root .container .right_content .navlist {
+  display: flex;
+  align-items: center;
+}
+.root .container .right_content .navlist a {
+  width: 52px;
+  height: 100%;
+  line-height: 60px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.root .container .right_content .navlist a div {
+  transform: translateX(13px);
+  height: 100%;
+  width: fit-content;
+}
+.root .container .right_content .navlist a:last-child {
+  width: 115px;
+}
+.root .container .right_content .navlist a:last-child img {
+  width: 100%;
+  height: 40px;
+}
+.root .container .right_content .navlist a:hover div {
+  border-bottom: 2px solid #1e80ff;
+}
+.root .container .right_content .right {
+  display: flex;
+  align-items: center;
+}
+.root .container .right_content .right .input {
+  width: 260px;
+  height: 31px;
+  font-size: 14px;
+  color: #c2c8d1;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+.root .container .right_content .right .input input {
+  width: 214px;
+  height: 100%;
+  padding: 7.2px 0 7.2px 12px;
+}
+.root .container .right_content .right .input span {
+  width: 44px;
+  height: 100%;
+  line-height: 31px;
+  text-align: center;
+  background-color: #f2f3f5;
+}
+.root .container .right_content .right .add_grounp {
+  width: 115px;
+  height: 34px;
+  background-color: #1e80ff;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.root .container .right_content .right .add_grounp button {
+  color: #fff;
+  height: 100%;
+  width: 94px;
+  background-color: #1e80ff;
+}
+.root .container .right_content .right .add_grounp .more {
+  height: 100%;
+  width: 20px;
+}
+.root .container .right_content .right .add_grounp:hover {
+  cursor: pointer;
+  background-color: #1171ee;
+}
+.root .container .right_content .right .add_grounp:hover button {
+  background-color: #1171ee;
+  cursor: pointer;
+  border: none;
+}
+.root .container .right_content .right .vip {
+  width: 24px;
+}
+.root .container .right_content .right .notice {
+  width: 54px;
+  padding: 0 24px 0 20px;
+}
+.root .container .right_content .right .person {
+  width: 60px;
+}
+.root .container .right_content .right .person img {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+}
+.root .container .right_content .right .vip,
+.root .container .right_content .right .notice,
+.root .container .right_content .right .person {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+.root .container .right_content .right .vip,
+.root .container .right_content .right .notice,
+.root .container .right_content .right .person:hover {
+  cursor: pointer;
+}
