@@ -42,10 +42,37 @@
                 margin-left: 22px;
 
                 .articlelist{
-                    background-color: #fff;
+                    
                     width: 720px;
                     margin-right: 18px;
                     border-radius: 4px;
+                    
+                    .top_content{
+                        display: flex;
+                        margin-bottom: 18px;
+                        padding-top: 15px;
+                        background-color: #fff;
+
+                        &>div {
+                            flex: 1;
+                        }
+
+                        .title{
+                            font-size: 16px;
+                        }
+
+                        .item {
+                            width: 100%;
+                            font-size: 14px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    
+                    .articles{
+                        background-color: #fff;
+                    }
                 }
     
                 .other {

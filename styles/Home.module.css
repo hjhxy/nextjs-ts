@@ -32,10 +32,31 @@
   margin-left: 22px;
 }
 .container .main .content .right_content .articlelist {
-  background-color: #fff;
   width: 720px;
   margin-right: 18px;
   border-radius: 4px;
+}
+.container .main .content .right_content .articlelist .top_content {
+  display: flex;
+  margin-bottom: 18px;
+  padding-top: 15px;
+  background-color: #fff;
+}
+.container .main .content .right_content .articlelist .top_content > div {
+  flex: 1;
+}
+.container .main .content .right_content .articlelist .top_content .title {
+  font-size: 16px;
+}
+.container .main .content .right_content .articlelist .top_content .item {
+  width: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .main .content .right_content .articlelist .articles {
+  background-color: #fff;
 }
 .container .main .content .right_content .other {
   background-color: #fff;

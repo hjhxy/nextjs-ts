@@ -3,6 +3,7 @@ import Head from '../components/head'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import { useState } from 'react'
+import ArticleListItem from '../components/articleListItem'
 
 
 const navList = [
@@ -48,10 +49,96 @@ const navList = [
     url: ''
   }
 ]
+
+const bangdan = [
+  {
+    id: 1,
+    name: '综合文章榜',
+    list: [
+      {
+        id: 1,
+        name: '在 React Router 中使用 JWT',
+        url:''
+      }, {
+        id: 2,
+        name: '某外包面试官：你还不会uniapp？😲😲',
+        url:''
+      }, {
+        id: 3,
+        name: '经济持续低迷环境下，女全栈程序员决定转行了',
+        url:''
+      }
+    ]
+  },{
+    id: 2,
+    name: '精选专栏榜',
+    list: [
+      {
+        id: 1,
+        name: '在 React Router 中使用 JWT',
+        url:''
+      }, {
+        id: 2,
+        name: '某外包面试官：你还不会uniapp？😲😲',
+        url:''
+      }, {
+        id: 3,
+        name: '经济持续低迷环境下，女全栈程序员决定转行了',
+        url:''
+      }
+    ]
+  },{
+    id: 3,
+    name: '推荐收集榜',
+    list: [
+      {
+        id: 1,
+        name: '在 React Router 中使用 JWT',
+        url:''
+      }, {
+        id: 2,
+        name: '某外包面试官：你还不会uniapp？😲😲',
+        url:''
+      }, {
+        id: 3,
+        name: '经济持续低迷环境下，女全栈程序员决定转行了',
+        url:''
+      }
+    ]
+  }
+]
+
+const articleList = [
+  {
+    id:1,
+    nickname: "探险家火焱",
+    time: '2月前',
+    keywords: ['前端', 'Typescript'],
+    title: '字节都在用的代码自动生成',
+    content: '如果有一份接口定义，前端和后端都能基于此生成相应端的代码，不仅能降低前后端沟通成本，而且还能提升研发效率。 字节内部的 RPC 定义主要基于 thrift 实现，thrift 定义了数据结构和函数，',
+    count: {
+        read: '4.2w',
+        up: '236',
+        comment:'57'
+    }
+  },
+  {
+    id:2,
+    nickname: "探险家火焱",
+    time: '2月前',
+    keywords: ['前端', 'Typescript'],
+    title: '字节都在用的代码自动生成',
+    content: '如果有一份接口定义，前端和后端都能基于此生成相应端的代码，不仅能降低前后端沟通成本，而且还能提升研发效率。 字节内部的 RPC 定义主要基于 thrift 实现，thrift 定义了数据结构和函数，',
+    count: {
+        read: '4.2w',
+        up: '236',
+        comment:'57'
+    }
+  },
+]
 const Home: NextPage = () => {
 
   const [nav, setNav] = useState(navList[1]);
-  
   
   return (
     <div className={styles.container}>
@@ -75,7 +162,24 @@ const Home: NextPage = () => {
             </ul>
           </div>
           <div className={ styles.right_content }>
-            <div className={ styles.articlelist }>12</div>
+            <div className={styles.articlelist}>
+              <div className={styles.top_content}>
+                {bangdan.map(item => {
+                  return (
+                    <div key={item.id}>
+                      <div className={styles.title}>{ item.name }</div>
+                        {item.list.map(item1 => {
+                          return <a className={styles.item } href={item1.url} key={item1.id}>{ item1.name }</a>
+                      }) }
+                    </div>)
+                }) }
+              </div>
+              <div className={styles.articles}>
+                {articleList.map(item => {
+                  return <ArticleListItem article={item} key={item.id}/>
+                }) }
+              </div>
+            </div>
             <div className={ styles.other }>12</div>
           </div>
         </div>
